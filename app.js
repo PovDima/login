@@ -7,12 +7,13 @@ const app = express();
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jsx');
 app.engine('jsx', reactViews.createEngine());
+app.use(express.static("views"));
 
 const mysql = require("mysql");
 const connection = mysql.createConnection({
 	host: "localhost",
 	user: "root",
-	password: "root",
+	password: "DimaPov19",
 	database: "loginuser"
 });
 
