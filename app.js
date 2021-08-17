@@ -24,7 +24,7 @@ app.use(bodyParser.text());
 app.post("/register", urlEncodedParser, function (request, response) {
 	const { url, body } = request
 	if (url != "/favicon.ico") {
-		if (body.regOrLogin == "Register") {
+		if (body.regOrLogin == "Реєстрація") {
 			bcrypt.genSalt(10, function (err, salt) {
 				bcrypt.hash(body.pwd, salt, function (err, hash) {
 					const postVars = { username: body.username, password: hash, role: body.role };
@@ -57,7 +57,7 @@ app.post("/register", urlEncodedParser, function (request, response) {
 app.post("/login", urlEncodedParser, function (request, response) {
 	const { url, body } = request
 	if (url != "/favicon.ico") {
-		if (body.regOrLogin == "Login") {
+		if (body.regOrLogin == "Логін") {
 			connection.query("SELECT * FROM user WHERE username='" + body.username + "'", function (err, res, fields) {
 				if (err) {
 					response.render("Error.jsx", { error: 'Username and Password is not correct' });

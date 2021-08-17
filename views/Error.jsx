@@ -4,15 +4,15 @@ const Error = React.createClass({
   render() {
     return (
       <html style={{
-        background: 'url(./image.jpg)', backgroundSize: 'contain', height: '100%', color: 'white'
+        background: 'url(./image.jpg)', backgroundSize: 'cover', height: '100%', color: 'white'
       }} >
         <center className="column is-offset-6 is-6">
-          <p>Error Page</p>
+          <p>Сторінка помилки</p>
           <p> {this.props.error}</p>
           {this.props.name === "Register" ?
-            <div>Click <a href='/register'>here </a>to Register. </div>
+            <div>Клікніть <a href='/register'>тут </a>для реєстрації. </div>
             :
-            <div> Click <a href='/'>here </a>to Login. </div>
+            <div> Клікніть <a href='/'>тут </a>для логіну. </div>
           }
         </center>
       </html>
