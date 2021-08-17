@@ -10,32 +10,33 @@ const Register = React.createClass({
           <center>
             <h1>Реєстрація</h1>
             <p>Введіть логін та пароль</p>
-            <table>
-              <form action="/register" method="post">
-                <tr>
-                  <td>Логін</td>
-                  <td><input type="text" name="username" /></td>
-                </tr>
-                <tr>
-                  <td>Роль</td>
-                  <td><select name="role">
+            <form action="/register" method="post" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+              <div style={{ display: 'flex', maxWidth: '215px', justifyContent: 'space-between', width: '100%' }}>
+                <div>Логін</div>
+                <div><input type="text" name="username" /></div>
+              </div>
+              <div style={{ display: 'flex', maxWidth: '215px', justifyContent: 'space-between', width: '100%' }} >
+                <div>Роль</div>
+                <div>
+                  <select name="role" style={{ display: 'flex', maxWidth: '215px', justifyContent: 'space-between', width: '100%' }}>
                     <option value="first">Перша</option>
                     <option value="second" >Друга</option>
                     <option value="third">Третя </option>
                   </select>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Пароль</td>
-                  <td><input type="password" name="pwd" /></td>
-                </tr>
-                <tr>
-                  <td align="center" colspan="2"><input type="submit" value="Реєстрація" name="regOrLogin" class="class1" /></td>
-                  <td></td>
-                </tr>
-              </form>
-            </table>
-            <td align="center" colspan="2"><a href='/' ><button>Логін</button></a></td>
+                </div>
+              </div>
+              <div style={{ display: 'flex', maxWidth: '215px', justifyContent: 'space-between', width: '100%' }}>
+                <div>Пароль</div>
+                <div><input type="password" name="pwd" /></div>
+              </div>
+              <br />
+              <div style={{ display: 'flex', maxWidth: '215px', justifyContent: 'center', width: '100%' }}>
+                <div align="center" colspan="2"><input type="submit" value="Реєстрація" name="regOrLogin" class="class1" /></div>
+                <div></div>
+              </div>
+            </form>
+            <br />
+            <a href='/' ><button>Логін</button></a>
           </center>
         </section>
       </html>

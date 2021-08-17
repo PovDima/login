@@ -15,22 +15,22 @@ const Login = React.createClass({
           <center>
             <h1>Електронний кабінет безпечного підключення до державних ресурсів</h1>
             <p>Введіть логін та пароль</p>
-            <table>
-              <form action="/login" method="post">
-                <tr>
-                  <td>Логін</td>
-                  <td><input type="text" name="username" /></td>
-                </tr>
-                <tr>
-                  <td>Пароль</td>
-                  <td><input type="password" name="pwd" /></td>
-                </tr>
-                <tr>
-                  <td colspan="2" align="center"><input type="submit" value="Логін" name="regOrLogin" class="class1" /></td>
-                </tr>
-              </form>
-            </table>
-            <td align="center" colspan="2"><a href='/register' ><button>Реєстрація</button></a></td>
+            <form action="/login" method="post" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+              <div style={{ display: 'flex', maxWidth: '215px', justifyContent: 'space-between', width: '100%' }}>
+                <div>Логін</div>
+                <div><input type="text" name="username" /></div>
+              </div>
+              <div style={{ display: 'flex', maxWidth: '215px', justifyContent: 'space-between', width: '100%' }}>
+                <div>Пароль</div>
+                <div><input type="password" name="pwd" /></div>
+              </div>
+              <br />
+              <div style={{ display: 'flex', maxWidth: '215px', justifyContent: 'center', width: '100%' }}>
+                <input type="submit" value="Логін" name="regOrLogin" class="class1" />
+              </div>
+              <br />
+            </form>
+            <a href='/register' ><button>Реєстрація</button></a>
           </center>
         </section>
       </html >
