@@ -6,7 +6,7 @@ const Welcome = React.createClass({
 
     return (
       <html style={{
-        background: 'url(./image.jpg)', backgroundSize: 'cover', height: '100%', color: 'white',
+        background: 'url(./image.jpg)', backgroundSize: 'cover', height: '100%', color: 'white', fontSize: '20px'
       }} >
         <center className="column is-offset-6 is-6">
           Електронний кабінет безпечного підключення до державних ресурсів
